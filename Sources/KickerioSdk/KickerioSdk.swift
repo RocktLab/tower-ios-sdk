@@ -10,7 +10,9 @@ struct KickerioSdk {
             "User-Agent": userAgentString
         ]
 
-        let parameters = parameters
+        let parameters = [
+            "data": parameters
+        ]
 
         AF.request(_base_url + "/api/v1/target-checks", method: .post, parameters: parameters, headers: headers).responseDecodable(of: KickerioResponse.self) { response in
                 onComplete(response as DataResponse<KickerioResponse, AFError>)
