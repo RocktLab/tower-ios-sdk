@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct KickerioResponse: Decodable {
+struct KickerioResponse: Codable {
     let message: String
     let matched: Bool
     let targetMeta: KickerioTargetMeta?

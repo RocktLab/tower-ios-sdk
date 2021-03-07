@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct KickerioTargetMeta: Decodable {
+struct KickerioTargetMeta: Codable {
     let version: String
     let buildNumber: String
     let hardDeprecation: Bool
