@@ -11,25 +11,28 @@ final class KickerioSdkTests: XCTestCase {
             "someKey": "someValue",
             "moreArgs": "moreValues"
         ]
-        // User-Agent: AppName/Version(BuildNumber) Platform/PlatformVersion
-        let userAgentString = "KickerApp/1.0.1(20901) iOS/10.3"
+        let appName = "KickerApp"
+        let appVersion = "1.0.1"
+        let buildNumber = "20901"
+        let platformVersion = "10.4"
+
         let kickerioSdk = KickerioSdk()
         var kickerResponse: KickerioResponse?
         let exp = self.expectation(description: "KickerioSdk Call")
 
-        kickerioSdk.checkApplicationDeprecation(apiKey: apiKey, userAgentString: userAgentString, parameters: params) { result in
+        kickerioSdk.checkApplicationDeprecation(apiKey: apiKey, appName: appName, appVersion: appVersion, buildNumber: buildNumber, platformVersion: platformVersion, parameters: params) { result in
 
             kickerResponse = result.value
             
             XCTAssertEqual(kickerResponse?.matched, true)
             XCTAssertEqual(kickerResponse?.message, "Please update the app to the newest version on the App Store")
-            
+            XCTAssertEqual(kickerResponse?.hardDeprecation, true)
+
             XCTAssertNotNil(kickerResponse?.targetMeta)
             XCTAssertEqual(kickerResponse?.targetMeta?.appName, "KickerApp")
             XCTAssertEqual(kickerResponse?.targetMeta?.buildNumber, "20901")
             XCTAssertEqual(kickerResponse?.targetMeta?.platform, "ios")
             XCTAssertEqual(kickerResponse?.targetMeta?.version, "1.0.1")
-            XCTAssertEqual(kickerResponse?.targetMeta?.hardDeprecation, true)
 
             exp.fulfill()
         }
@@ -45,15 +48,22 @@ final class KickerioSdkTests: XCTestCase {
             "someKey": "someValue",
             "moreArgs": "moreValues"
         ]
-        // User-Agent: AppName/Version(BuildNumber) Platform/PlatformVersion
-        let userAgentString = "KickerApp/1.0.0(20901) iOS/10.3"
+        let appName = "KickerApp"
+        let appVersion = "1.0.0" // Changed version
+        let buildNumber = "20901"
+        let platformVersion = "10.3"
+
         let exp = expectation(description: "Alamofire")
 
-        KickerioSdk().checkApplicationDeprecation(apiKey: apiKey, userAgentString: userAgentString, parameters: params) { result in
+        KickerioSdk().checkApplicationDeprecation(apiKey: apiKey, appName: appName, appVersion: appVersion, buildNumber: buildNumber, platformVersion: platformVersion, parameters: params) { result in
+            
+            debugPrint(result)
+            
             let kickerResponse: KickerioResponse? = result.value
 
             XCTAssertEqual(kickerResponse?.matched, false)
             XCTAssertEqual(kickerResponse?.message, "No app version matched")
+            XCTAssertNil(kickerResponse?.hardDeprecation)
             XCTAssertNil(kickerResponse?.targetMeta)
             
             exp.fulfill()

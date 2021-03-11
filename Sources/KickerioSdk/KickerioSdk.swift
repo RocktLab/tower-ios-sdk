@@ -4,11 +4,15 @@ import Foundation
 struct KickerioSdk {
     let _base_url = "http://localhost:3000"
 
-    func checkApplicationDeprecation(apiKey: String, userAgentString: String, parameters: [String: String], onComplete: @escaping (DataResponse<KickerioResponse, AFError>) -> ()) {
+    func checkApplicationDeprecation(apiKey: String, appName: String, appVersion: String, buildNumber: String, platformVersion: String, parameters: [String: String], onComplete: @escaping (DataResponse<KickerioResponse, AFError>) -> ()) {
         let headers: HTTPHeaders = [
             "Accept": "application/json",
             "X-API-KEY": apiKey,
-            "User-Agent": userAgentString
+            "X-KICKERIO-APP-NAME": appName,
+            "X-KICKERIO-APP-VERSION": appVersion,
+            "X-KICKERIO-BUILD-NUMBER": buildNumber,
+            "X-KICKERIO-PLATFORM": "iOS",
+            "X-KICKERIO-PLATFORM-OS-VERSION": platformVersion
         ]
 
         let parameters = [

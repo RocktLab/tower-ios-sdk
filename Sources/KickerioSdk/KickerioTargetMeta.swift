@@ -10,7 +10,6 @@ import Foundation
 struct KickerioTargetMeta: Codable {
     let version: String
     let buildNumber: String
-    let hardDeprecation: Bool
     let platform: String
     let appName: String
 }
