@@ -30,11 +30,7 @@ public enum KickerioError: Error {
 }
 
 public final class KickerioSdk {
-    public typealias CompletionHandler = (Result<KickerioResponse, Swift.Error>) -> Void
-
-    enum Error: Swift.Error {
-        case badURL
-    }
+    public typealias CompletionHandler = (Result<KickerioResponse, Error>) -> Void
 
     private static let baseURL = "http://localhost:3000"
     private static let apiKeyPlistKey = "kickerio_api_key"
