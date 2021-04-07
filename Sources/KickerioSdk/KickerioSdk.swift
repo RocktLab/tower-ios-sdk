@@ -88,7 +88,15 @@ public final class KickerioSdk {
         urlRequest.setValue(appName, forHTTPHeaderField: "X-KICKERIO-APP-NAME")
         urlRequest.setValue(appVersion, forHTTPHeaderField: "X-KICKERIO-APP-VERSION")
         urlRequest.setValue(buildNumber, forHTTPHeaderField: "X-KICKERIO-BUILD-NUMBER")
-        urlRequest.setValue("iOS", forHTTPHeaderField: "X-KICKERIO-PLATFORM")
+        #if os(iOS)
+            urlRequest.setValue("iOS", forHTTPHeaderField: "X-KICKERIO-PLATFORM")
+        #elseif os(OSX)
+            urlRequest.setValue("OSX", forHTTPHeaderField: "X-KICKERIO-PLATFORM")
+        #elseif os(watchOS)
+            urlRequest.setValue("watchOS", forHTTPHeaderField: "X-KICKERIO-PLATFORM")
+        #elseif os(tvOS)
+            urlRequest.setValue("tvOS", forHTTPHeaderField: "X-KICKERIO-PLATFORM")
+        #endif
         urlRequest.setValue(platformVersion, forHTTPHeaderField: "X-KICKERIO-PLATFORM-OS-VERSION")
 
         let body = [
