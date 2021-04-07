@@ -1,6 +1,6 @@
 import Foundation
 
-struct KickerioResponse: Codable {
+public struct KickerioResponse: Codable {
     let message: String
     let matched: Bool
     let hardDeprecation: Bool?

@@ -1,6 +1,6 @@
 import Foundation
 
-struct KickerioTargetMeta: Codable {
+public struct KickerioTargetMeta: Codable {
     let version: String
     let buildNumber: String
     let platform: String
