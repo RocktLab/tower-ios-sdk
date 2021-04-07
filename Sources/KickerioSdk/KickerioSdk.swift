@@ -2,7 +2,7 @@ import Alamofire
 import Foundation
 
 struct KickerioSdk {
-    let _base_url = "http://localhost:3000"
+    private static let baseURL = "http://localhost:3000"
 
     func checkApplicationDeprecation(apiKey: String, appName: String, appVersion: String, buildNumber: String, platformVersion: String, parameters: [String: String], onComplete: @escaping (DataResponse<KickerioResponse, AFError>) -> ()) {
         let headers: HTTPHeaders = [
@@ -25,7 +25,7 @@ struct KickerioSdk {
             return decoder
         }()
 
-        AF.request(_base_url + "/api/v1/target-checks", method: .post, parameters: parameters, headers: headers).responseDecodable(of: KickerioResponse.self, decoder: decoder) { response in
+        AF.request(Self.baseURL + "/api/v1/target-checks", method: .post, parameters: parameters, headers: headers).responseDecodable(of: KickerioResponse.self, decoder: decoder) { response in
                 onComplete(response as DataResponse<KickerioResponse, AFError>)
         }
     }
