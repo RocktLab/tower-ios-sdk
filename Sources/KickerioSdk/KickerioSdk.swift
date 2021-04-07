@@ -38,13 +38,13 @@ public final class KickerioSdk {
     private static let appVersionPlistKey = "CFBundleShortVersionString"
     private static let buildNumberPlistKey = "CFBundleVersion"
 
-    private let apiKey: String
-    private let appName: String
-    private let appVersion: String
-    private let buildNumber: String
-    private let platformVersion: String
-    private let parameters: [String: String]
-    private let urlSession: URLSession
+    internal let apiKey: String
+    internal let appName: String
+    internal let appVersion: String
+    internal let buildNumber: String
+    internal let platformVersion: String
+    internal let parameters: [String: String]
+    internal let urlSession: URLSession
 
     public convenience init(bundle: Bundle = .main,
                             processInfo: ProcessInfo = .processInfo,
