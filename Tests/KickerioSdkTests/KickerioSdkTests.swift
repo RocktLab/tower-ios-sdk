@@ -5,24 +5,21 @@ import Alamofire
 final class KickerioSdkTests: XCTestCase {
     func testAppTargetHit() {
         // Using version equals to 1.0.1 which is a target for the given key
-
-        let apiKey = "6d71d7ebb9e2c0ed.dd24791ce6985c526497ec3fdcb4126521deff88f613db6680eea15a0d9f9b00"
-        let params = [
-            "someKey": "someValue",
-            "moreArgs": "moreValues"
-        ]
-        let appName = "KickerApp"
-        let appVersion = "1.0.1"
-        let buildNumber = "20901"
-        let platformVersion = "10.4"
-
-        let kickerioSdk = KickerioSdk()
+        let kickerioSdk = KickerioSdk(apiKey: "6d71d7ebb9e2c0ed.dd24791ce6985c526497ec3fdcb4126521deff88f613db6680eea15a0d9f9b00",
+                                      appName: "KickerApp",
+                                      appVersion: "1.0.1",
+                                      buildNumber: "20901",
+                                      platformVersion: "10.4",
+                                      parameters: [
+                                        "someKey": "someValue",
+                                        "moreArgs": "moreValues"
+                                      ],
+                                      urlSession: URLSession.shared)
         var kickerResponse: KickerioResponse?
-        let exp = self.expectation(description: "KickerioSdk Call")
 
-        kickerioSdk.checkApplicationDeprecation(apiKey: apiKey, appName: appName, appVersion: appVersion, buildNumber: buildNumber, platformVersion: platformVersion, parameters: params) { result in
-
-            kickerResponse = result.value
+        let exp = self.expectation(description: "KickerioSdk call")
+        kickerioSdk.checkApplicationDeprecation { result in
+            kickerResponse = try? result.get()
             
             XCTAssertEqual(kickerResponse?.matched, true)
             XCTAssertEqual(kickerResponse?.message, "Please update the app to the newest version on the App Store")
@@ -42,24 +39,22 @@ final class KickerioSdkTests: XCTestCase {
 
     func testAppTargetNotHit() {
         // Using version equals to 1.0.0 which is not a target for the given key
+        let kickerioSdk = KickerioSdk(apiKey: "6d71d7ebb9e2c0ed.dd24791ce6985c526497ec3fdcb4126521deff88f613db6680eea15a0d9f9b00",
+                                      appName: "KickerApp",
+                                      appVersion: "1.0.0",
+                                      buildNumber: "20901",
+                                      platformVersion: "10.4",
+                                      parameters: [
+                                        "someKey": "someValue",
+                                        "moreArgs": "moreValues"
+                                      ],
+                                      urlSession: URLSession.shared)
 
-        let apiKey = "6d71d7ebb9e2c0ed.dd24791ce6985c526497ec3fdcb4126521deff88f613db6680eea15a0d9f9b00"
-        let params = [
-            "someKey": "someValue",
-            "moreArgs": "moreValues"
-        ]
-        let appName = "KickerApp"
-        let appVersion = "1.0.0" // Changed version
-        let buildNumber = "20901"
-        let platformVersion = "10.3"
-
-        let exp = expectation(description: "Alamofire")
-
-        KickerioSdk().checkApplicationDeprecation(apiKey: apiKey, appName: appName, appVersion: appVersion, buildNumber: buildNumber, platformVersion: platformVersion, parameters: params) { result in
-            
+        let exp = expectation(description: "KickerioSdk call")
+        kickerioSdk.checkApplicationDeprecation { result in
             debugPrint(result)
             
-            let kickerResponse: KickerioResponse? = result.value
+            let kickerResponse: KickerioResponse? = try? result.get()
 
             XCTAssertEqual(kickerResponse?.matched, false)
             XCTAssertEqual(kickerResponse?.message, "No app version matched")
