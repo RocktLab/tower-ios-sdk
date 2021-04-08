@@ -67,6 +67,16 @@ final class KickerioSdkTests: XCTestCase {
         waitForExpectations(timeout: 3, handler: nil)
     }
 
+    func testPullingValuesFromBundle() {
+        let testBundle = Bundle(for: type(of: self))
+        let kickerioSdk = try! KickerioSdk(bundle: testBundle)
+        XCTAssertEqual(kickerioSdk.apiKey, "1337")
+        XCTAssertEqual(kickerioSdk.appName, "KickerioSdkTests")
+        XCTAssertEqual(kickerioSdk.appVersion, "1.0")
+        XCTAssertEqual(kickerioSdk.buildNumber, "1")
+        XCTAssertEqual(kickerioSdk.platformVersion, ProcessInfo.processInfo.operatingSystemVersionString)
+    }
+
     static var allTests = [
         ("testAppTargetHit", testAppTargetHit),
         ("testAppTargetNotHit", testAppTargetNotHit),
