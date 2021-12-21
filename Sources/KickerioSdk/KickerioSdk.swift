@@ -32,7 +32,7 @@ public enum KickerioError: Error {
 public final class KickerioSdk {
     public typealias CompletionHandler = (Result<KickerioResponse, Error>) -> Void
 
-    private static let baseURL = "http://localhost:3000"
+    private static let baseURL = "https://kickerio-web-staging.herokuapp.com"
     private static let apiKeyPlistKey = "kickerio_api_key"
     private static let appNamePlistKey = "CFBundleName"
     private static let appVersionPlistKey = "CFBundleShortVersionString"
