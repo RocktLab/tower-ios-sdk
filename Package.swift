@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "KickerioSdk",
+    name: "KickItSdk",
     platforms: [
         .iOS(.v11),.macOS(.v10_12),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "KickerioSdk",
-            targets: ["KickerioSdk"]),
+            name: "KickItSdk",
+            targets: ["KickItSdk"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,10 +22,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "KickerioSdk",
+            name: "KickItSdk",
             dependencies: []),
         .testTarget(
-            name: "KickerioSdkTests",
+            name: "KickItSdkTests",
             dependencies: []),
     ]
 )

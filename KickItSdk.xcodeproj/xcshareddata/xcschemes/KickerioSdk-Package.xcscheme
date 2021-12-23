@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "KickerioSdk::KickerioSdk"
                BuildableName = "KickerioSdk.framework"
-               BlueprintName = "KickerioSdk"
-               ReferencedContainer = "container:KickerioSdk.xcodeproj">
+               BlueprintName = "KickItSdk"
+               ReferencedContainer = "container:KickItSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "KickerioSdk::KickerioSdkTests"
-               BuildableName = "KickerioSdkTests.xctest"
-               BlueprintName = "KickerioSdkTests"
-               ReferencedContainer = "container:KickerioSdk.xcodeproj">
+               BuildableName = "KickItSdkTests.xctest"
+               BlueprintName = "KickItSdkTests"
+               ReferencedContainer = "container:KickItSdk.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

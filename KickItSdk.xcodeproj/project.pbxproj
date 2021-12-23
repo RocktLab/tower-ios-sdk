@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		"KickerioSdk::KickerioSdkPackageTests::ProductTarget" /* KickerioSdkPackageTests */ = {
+		"KickerioSdk::KickerioSdkPackageTests::ProductTarget" /* KickItSdkPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_36 /* Build configuration list for PBXAggregateTarget "KickerioSdkPackageTests" */;
+			buildConfigurationList = OBJ_36 /* Build configuration list for PBXAggregateTarget "KickItSdkPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
 				OBJ_39 /* PBXTargetDependency */,
 			);
-			name = KickerioSdkPackageTests;
+			name = KickItSdkPackageTests;
 			productName = KickerioSdkPackageTests;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_25 /* KickerioResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* KickerioResponse.swift */; };
-		OBJ_26 /* KickerioSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* KickerioSdk.swift */; };
-		OBJ_27 /* KickerioTargetMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* KickerioTargetMeta.swift */; };
+		OBJ_25 /* KickItResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* KickItResponse.swift */; };
+		OBJ_26 /* KickItSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* KickItSdk.swift */; };
+		OBJ_27 /* KickItTargetMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* KickItTargetMeta.swift */; };
 		OBJ_34 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_45 /* KickerioSdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* KickerioSdkTests.swift */; };
 		OBJ_46 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* XCTestManifests.swift */; };
@@ -41,15 +41,15 @@
 
 /* Begin PBXFileReference section */
 		ED1F6A5F261DDF00006B2D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
-		"KickerioSdk::KickerioSdk::Product" /* KickerioSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KickerioSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"KickerioSdk::KickerioSdkTests::Product" /* KickerioSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = KickerioSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* KickerioSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerioSdk.swift; sourceTree = "<group>"; };
-		OBJ_11 /* KickerioTargetMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerioTargetMeta.swift; sourceTree = "<group>"; };
+		"KickerioSdk::KickerioSdk::Product" /* KickItSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KickItSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"KickerioSdk::KickerioSdkTests::Product" /* KickItSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = KickItSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* KickItSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickItSdk.swift; sourceTree = "<group>"; };
+		OBJ_11 /* KickItTargetMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickItTargetMeta.swift; sourceTree = "<group>"; };
 		OBJ_14 /* KickerioSdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerioSdkTests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* KickerioResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerioResponse.swift; sourceTree = "<group>"; };
+		OBJ_9 /* KickItResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickItResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,32 +73,32 @@
 		OBJ_12 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* KickerioSdkTests */,
+				OBJ_13 /* KickItSdkTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_13 /* KickerioSdkTests */ = {
+		OBJ_13 /* KickItSdkTests */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* KickerioSdkTests.swift */,
 				OBJ_15 /* XCTestManifests.swift */,
 				ED1F6A5F261DDF00006B2D93 /* Info.plist */,
 			);
-			name = KickerioSdkTests;
-			path = Tests/KickerioSdkTests;
+			name = KickItSdkTests;
+			path = Tests/KickItSdkTests;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"KickerioSdk::KickerioSdkTests::Product" /* KickerioSdkTests.xctest */,
-				"KickerioSdk::KickerioSdk::Product" /* KickerioSdk.framework */,
+				"KickerioSdk::KickerioSdkTests::Product" /* KickItSdkTests.xctest */,
+				"KickerioSdk::KickerioSdk::Product" /* KickItSdk.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -107,34 +107,33 @@
 				OBJ_16 /* Products */,
 				OBJ_19 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* KickerioSdk */,
+				OBJ_8 /* KickItSdk */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_8 /* KickerioSdk */ = {
+		OBJ_8 /* KickItSdk */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* KickerioResponse.swift */,
-				OBJ_10 /* KickerioSdk.swift */,
-				OBJ_11 /* KickerioTargetMeta.swift */,
+				OBJ_9 /* KickItResponse.swift */,
+				OBJ_10 /* KickItSdk.swift */,
+				OBJ_11 /* KickItTargetMeta.swift */,
 			);
-			name = KickerioSdk;
-			path = Sources/KickerioSdk;
+			name = KickItSdk;
+			path = Sources/KickItSdk;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"KickerioSdk::KickerioSdk" /* KickerioSdk */ = {
+		"KickerioSdk::KickerioSdk" /* KickItSdk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_21 /* Build configuration list for PBXNativeTarget "KickerioSdk" */;
+			buildConfigurationList = OBJ_21 /* Build configuration list for PBXNativeTarget "KickItSdk" */;
 			buildPhases = (
 				OBJ_24 /* Sources */,
 				OBJ_28 /* Frameworks */,
@@ -143,14 +142,14 @@
 			);
 			dependencies = (
 			);
-			name = KickerioSdk;
+			name = KickItSdk;
 			productName = KickerioSdk;
-			productReference = "KickerioSdk::KickerioSdk::Product" /* KickerioSdk.framework */;
+			productReference = "KickerioSdk::KickerioSdk::Product" /* KickItSdk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"KickerioSdk::KickerioSdkTests" /* KickerioSdkTests */ = {
+		"KickerioSdk::KickerioSdkTests" /* KickItSdkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_41 /* Build configuration list for PBXNativeTarget "KickerioSdkTests" */;
+			buildConfigurationList = OBJ_41 /* Build configuration list for PBXNativeTarget "KickItSdkTests" */;
 			buildPhases = (
 				OBJ_44 /* Sources */,
 				OBJ_47 /* Frameworks */,
@@ -159,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = KickerioSdkTests;
+			name = KickItSdkTests;
 			productName = KickerioSdkTests;
-			productReference = "KickerioSdk::KickerioSdkTests::Product" /* KickerioSdkTests.xctest */;
+			productReference = "KickerioSdk::KickerioSdkTests::Product" /* KickItSdkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		"KickerioSdk::SwiftPMPackageDescription" /* KickerioSdkPackageDescription */ = {
+		"KickerioSdk::SwiftPMPackageDescription" /* KickItSdkPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "KickerioSdkPackageDescription" */;
+			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "KickItSdkPackageDescription" */;
 			buildPhases = (
 				OBJ_33 /* Sources */,
 			);
@@ -174,7 +173,7 @@
 			);
 			dependencies = (
 			);
-			name = KickerioSdkPackageDescription;
+			name = KickItSdkPackageDescription;
 			productName = KickerioSdkPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
@@ -187,22 +186,22 @@
 				LastSwiftMigration = 9999;
 				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "KickerioSdk" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "KickItSdk" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"KickerioSdk::KickerioSdk" /* KickerioSdk */,
-				"KickerioSdk::SwiftPMPackageDescription" /* KickerioSdkPackageDescription */,
-				"KickerioSdk::KickerioSdkPackageTests::ProductTarget" /* KickerioSdkPackageTests */,
-				"KickerioSdk::KickerioSdkTests" /* KickerioSdkTests */,
+				"KickerioSdk::KickerioSdk" /* KickItSdk */,
+				"KickerioSdk::SwiftPMPackageDescription" /* KickItSdkPackageDescription */,
+				"KickerioSdk::KickerioSdkPackageTests::ProductTarget" /* KickItSdkPackageTests */,
+				"KickerioSdk::KickerioSdkTests" /* KickItSdkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,9 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_25 /* KickerioResponse.swift in Sources */,
-				OBJ_26 /* KickerioSdk.swift in Sources */,
-				OBJ_27 /* KickerioTargetMeta.swift in Sources */,
+				OBJ_25 /* KickItResponse.swift in Sources */,
+				OBJ_26 /* KickItSdk.swift in Sources */,
+				OBJ_27 /* KickItTargetMeta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +239,7 @@
 /* Begin PBXTargetDependency section */
 		OBJ_39 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "KickerioSdk::KickerioSdkTests" /* KickerioSdkTests */;
+			target = "KickerioSdk::KickerioSdkTests" /* KickItSdkTests */;
 			targetProxy = ED1F6A5C261DDEBF006B2D93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -255,20 +254,20 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = KickerioSdk.xcodeproj/KickerioSdk_Info.plist;
+				INFOPLIST_FILE = KickItSdk.xcodeproj/KickItSdk_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = KickerioSdk;
+				PRODUCT_BUNDLE_IDENTIFIER = KickItSdk;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = KickerioSdk;
+				TARGET_NAME = KickItSdk;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -283,20 +282,20 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = KickerioSdk.xcodeproj/KickerioSdk_Info.plist;
+				INFOPLIST_FILE = KickItSdk.xcodeproj/KickItSdk_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = KickerioSdk;
+				PRODUCT_BUNDLE_IDENTIFIER = KickItSdk;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = KickerioSdk;
+				TARGET_NAME = KickItSdk;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -334,6 +333,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				PRODUCT_NAME = KickItSdkPackageDescription;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -343,6 +343,7 @@
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				PRODUCT_NAME = KickItSdkPackageDescription;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -350,12 +351,14 @@
 		OBJ_37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = KickItSdkPackageTests;
 			};
 			name = Debug;
 		};
 		OBJ_38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = KickItSdkPackageTests;
 			};
 			name = Release;
 		};
@@ -400,9 +403,10 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_NAME = KickItSdkTests;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = KickerioSdkTests;
+				TARGET_NAME = KickItSdkTests;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -425,9 +429,10 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_NAME = KickItSdkTests;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGET_NAME = KickerioSdkTests;
+				TARGET_NAME = KickItSdkTests;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -436,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_2 /* Build configuration list for PBXProject "KickerioSdk" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "KickItSdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_3 /* Debug */,
@@ -445,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_21 /* Build configuration list for PBXNativeTarget "KickerioSdk" */ = {
+		OBJ_21 /* Build configuration list for PBXNativeTarget "KickItSdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_22 /* Debug */,
@@ -454,7 +459,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_30 /* Build configuration list for PBXNativeTarget "KickerioSdkPackageDescription" */ = {
+		OBJ_30 /* Build configuration list for PBXNativeTarget "KickItSdkPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_31 /* Debug */,
@@ -463,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_36 /* Build configuration list for PBXAggregateTarget "KickerioSdkPackageTests" */ = {
+		OBJ_36 /* Build configuration list for PBXAggregateTarget "KickItSdkPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_37 /* Debug */,
@@ -472,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_41 /* Build configuration list for PBXNativeTarget "KickerioSdkTests" */ = {
+		OBJ_41 /* Build configuration list for PBXNativeTarget "KickItSdkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_42 /* Debug */,

@@ -1,6 +1,6 @@
 import Foundation
 
-public enum KickerioError: Error {
+public enum KickItError: Error {
     case noValueFound(forKey: String)
     case badType(forKey: String, expectedType: String, actualType: String)
     case badURL
@@ -29,8 +29,8 @@ public enum KickerioError: Error {
     }
 }
 
-public final class KickerioSdk {
-    public typealias CompletionHandler = (Result<KickerioResponse, Error>) -> Void
+public final class KickItSdk {
+    public typealias CompletionHandler = (Result<KickItResponse, Error>) -> Void
 
     private static let baseURL = "https://kickit-web-staging.herokuapp.com"
     private static let apiKeyPlistKey = "kickit_api_key"
@@ -78,7 +78,7 @@ public final class KickerioSdk {
     public func checkApplicationDeprecation(onComplete: @escaping CompletionHandler) {
         guard let url = URL(string: "\(Self.baseURL)/api/v1/target-checks") else {
             assertionFailure("Error initializing KickerIO URL")
-            onComplete(.failure(KickerioError.badURL))
+            onComplete(.failure(KickItError.badURL))
             return
         }
 
@@ -124,13 +124,13 @@ public final class KickerioSdk {
             }
 
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                onComplete(.failure(KickerioError.badResponse(response: response)))
+                onComplete(.failure(KickItError.badResponse(response: response)))
                 return
             }
 
             guard let nonNilData = data,
-                  let kickerioResponse = try? decoder.decode(KickerioResponse.self, from: nonNilData) else {
-                onComplete(.failure(KickerioError.couldNotParseData(data: data)))
+                  let kickerioResponse = try? decoder.decode(KickItResponse.self, from: nonNilData) else {
+                onComplete(.failure(KickItError.couldNotParseData(data: data)))
                 return
             }
 
@@ -142,10 +142,10 @@ public final class KickerioSdk {
 extension Bundle {
     func value<T>(forKey key: String) throws -> T {
         guard let value = object(forInfoDictionaryKey: key) else {
-            throw KickerioError.noValueFound(forKey: key)
+            throw KickItError.noValueFound(forKey: key)
         }
         guard let coercedValue = value as? T else {
-            throw KickerioError.badType(forKey: key, expectedType: "\(T.self)", actualType: "\(type(of: value))")
+            throw KickItError.badType(forKey: key, expectedType: "\(T.self)", actualType: "\(type(of: value))")
         }
         return coercedValue
     }

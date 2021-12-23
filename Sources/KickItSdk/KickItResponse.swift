@@ -1,8 +1,8 @@
 import Foundation
 
-public struct KickerioResponse: Codable {
+public struct KickItResponse: Codable {
     let message: String
     let matched: Bool
     let hardDeprecation: Bool?
-    let targetMeta: KickerioTargetMeta?
+    let targetMeta: KickItTargetMeta?
 }
