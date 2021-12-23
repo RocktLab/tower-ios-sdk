@@ -1,3 +1,3 @@
-# kickerio-ios-sdk
+# KickItSDK
 
 A description of this package.
