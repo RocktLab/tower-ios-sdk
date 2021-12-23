@@ -22,7 +22,7 @@
 	<string>1</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
-	<key>kickerio_api_key</key>
+	<key>kickit_api_key</key>
 	<string>1337</string>
 </dict>
 </plist>

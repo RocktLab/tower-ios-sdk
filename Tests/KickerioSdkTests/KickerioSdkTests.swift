@@ -1,11 +1,10 @@
 import XCTest
-import Alamofire
 @testable import KickerioSdk
 
 final class KickerioSdkTests: XCTestCase {
     func testAppTargetHit() {
         // Using version equals to 1.0.1 which is a target for the given key
-        let kickerioSdk = KickerioSdk(apiKey: "6d71d7ebb9e2c0ed.dd24791ce6985c526497ec3fdcb4126521deff88f613db6680eea15a0d9f9b00",
+        let kickerioSdk = KickerioSdk(apiKey: "1637dbd79b64f067.ff3697cffb3537e11abfb81c0d9252f4f20155c306955bc9d7de96982305ffb9",
                                       appName: "KickerApp",
                                       appVersion: "1.0.1",
                                       buildNumber: "20901",
@@ -34,12 +33,12 @@ final class KickerioSdkTests: XCTestCase {
             exp.fulfill()
         }
 
-        waitForExpectations(timeout: 3, handler: nil)
+        wait(for: [exp], timeout: 3.0)
     }
 
     func testAppTargetNotHit() {
         // Using version equals to 1.0.0 which is not a target for the given key
-        let kickerioSdk = KickerioSdk(apiKey: "6d71d7ebb9e2c0ed.dd24791ce6985c526497ec3fdcb4126521deff88f613db6680eea15a0d9f9b00",
+        let kickerioSdk = KickerioSdk(apiKey: "1637dbd79b64f067.ff3697cffb3537e11abfb81c0d9252f4f20155c306955bc9d7de96982305ffb9",
                                       appName: "KickerApp",
                                       appVersion: "1.0.0",
                                       buildNumber: "20901",
@@ -64,7 +63,7 @@ final class KickerioSdkTests: XCTestCase {
             exp.fulfill()
         }
 
-        waitForExpectations(timeout: 3, handler: nil)
+        wait(for: [exp], timeout: 3.0)
     }
 
     func testPullingValuesFromBundle() {
