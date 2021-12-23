@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "KickerioSdk::KickerioSdk"
-               BuildableName = "KickerioSdk.framework"
+               BuildableName = "KickItSdk.framework"
                BlueprintName = "KickItSdk"
                ReferencedContainer = "container:KickItSdk.xcodeproj">
             </BuildableReference>
