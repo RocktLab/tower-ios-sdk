@@ -25,7 +25,7 @@
 		OBJ_26 /* KickItSdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* KickItSdk.swift */; };
 		OBJ_27 /* KickItTargetMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* KickItTargetMeta.swift */; };
 		OBJ_34 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_45 /* KickerioSdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* KickerioSdkTests.swift */; };
+		OBJ_45 /* KickItSdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* KickItSdkTests.swift */; };
 		OBJ_46 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,7 @@
 		"KickerioSdk::KickerioSdkTests::Product" /* KickItSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = KickItSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* KickItSdk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickItSdk.swift; sourceTree = "<group>"; };
 		OBJ_11 /* KickItTargetMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickItTargetMeta.swift; sourceTree = "<group>"; };
-		OBJ_14 /* KickerioSdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickerioSdkTests.swift; sourceTree = "<group>"; };
+		OBJ_14 /* KickItSdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickItSdkTests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		OBJ_13 /* KickItSdkTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_14 /* KickerioSdkTests.swift */,
+				OBJ_14 /* KickItSdkTests.swift */,
 				OBJ_15 /* XCTestManifests.swift */,
 				ED1F6A5F261DDF00006B2D93 /* Info.plist */,
 			);
@@ -229,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_45 /* KickerioSdkTests.swift in Sources */,
+				OBJ_45 /* KickItSdkTests.swift in Sources */,
 				OBJ_46 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +258,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -286,6 +287,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
