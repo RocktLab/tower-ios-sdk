@@ -85,6 +85,7 @@ public final class KickItSdk {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.setValue(apiKey, forHTTPHeaderField: "X-API-KEY")
         urlRequest.setValue(appName, forHTTPHeaderField: "X-KICKIT-APP-NAME")
         urlRequest.setValue(appVersion, forHTTPHeaderField: "X-KICKIT-APP-VERSION")
@@ -100,7 +101,6 @@ public final class KickItSdk {
 //        #endif
         urlRequest.setValue("iOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
         urlRequest.setValue(platformVersion, forHTTPHeaderField: "X-KICKIT-PLATFORM-OS-VERSION")
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let body = [
             "data": parameters
