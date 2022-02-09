@@ -90,16 +90,15 @@ public final class KickItSdk {
         urlRequest.setValue(appName, forHTTPHeaderField: "X-KICKIT-APP-NAME")
         urlRequest.setValue(appVersion, forHTTPHeaderField: "X-KICKIT-APP-VERSION")
         urlRequest.setValue(buildNumber, forHTTPHeaderField: "X-KICKIT-BUILD-NUMBER")
-//        #if os(iOS)
-//            urlRequest.setValue("iOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
-//        #elseif os(OSX)
-//            urlRequest.setValue("OSX", forHTTPHeaderField: "X-KICKIT-PLATFORM")
-//        #elseif os(watchOS)
-//            urlRequest.setValue("watchOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
-//        #elseif os(tvOS)
-//            urlRequest.setValue("tvOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
-//        #endif
-        urlRequest.setValue("iOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
+        #if os(iOS)
+            urlRequest.setValue("iOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
+        #elseif os(OSX)
+            urlRequest.setValue("OSX", forHTTPHeaderField: "X-KICKIT-PLATFORM")
+        #elseif os(watchOS)
+            urlRequest.setValue("watchOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
+        #elseif os(tvOS)
+            urlRequest.setValue("tvOS", forHTTPHeaderField: "X-KICKIT-PLATFORM")
+        #endif
         urlRequest.setValue(platformVersion, forHTTPHeaderField: "X-KICKIT-PLATFORM-OS-VERSION")
 
         let body = [
