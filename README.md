@@ -5,6 +5,9 @@ This project was created to integrate Apple apps with the [KickIt](https://www.k
 Here's an example of how the SDK can be used:
 
 ```swift
+// ...
+@State private var showingAlert = false
+@State private var alertMessage = ""
 @State private var shouldCloseApp = Optional(false)
 // ...
 func checkAppDeprecation() {
