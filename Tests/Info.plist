@@ -24,5 +24,7 @@
 	<string></string>
 	<key>kickit_api_key</key>
 	<string>1337</string>
+	<key>kickit_api_base_url</key>
+	<string>https://kickit-web-staging.herokuapp.com</string>
 </dict>
 </plist>

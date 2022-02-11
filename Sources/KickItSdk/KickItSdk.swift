@@ -32,12 +32,14 @@ public enum KickItError: Error {
 public final class KickItSdk {
     public typealias CompletionHandler = (Result<KickItResponse, Error>) -> Void
 
-    private static let baseURL = "https://kickit-web-staging.herokuapp.com"
+    private static let baseURL = "https://kickit.dev"
+    private static let baseURLKey = "kickit_api_base_url"
     private static let apiKeyPlistKey = "kickit_api_key"
     private static let appNamePlistKey = "CFBundleName"
     private static let appVersionPlistKey = "CFBundleShortVersionString"
     private static let buildNumberPlistKey = "CFBundleVersion"
 
+    internal let baseURLOverride: String
     internal let apiKey: String
     internal let appName: String
     internal let appVersion: String
@@ -54,6 +56,7 @@ public final class KickItSdk {
                   appName: try bundle.value(forKey: Self.appNamePlistKey),
                   appVersion: try bundle.value(forKey: Self.appVersionPlistKey),
                   buildNumber: try bundle.value(forKey: Self.buildNumberPlistKey),
+                  baseURLOverride: try bundle.value(forKey: Self.baseURLKey),
                   platformVersion: processInfo.operatingSystemVersionString,
                   parameters: parameters,
                   urlSession: urlSession)
@@ -63,6 +66,7 @@ public final class KickItSdk {
                 appName: String,
                 appVersion: String,
                 buildNumber: String,
+                baseURLOverride: String,
                 platformVersion: String,
                 parameters: [String: String],
                 urlSession: URLSession) {
@@ -70,13 +74,18 @@ public final class KickItSdk {
         self.appName = appName
         self.appVersion = appVersion
         self.buildNumber = buildNumber
+        self.baseURLOverride = baseURLOverride
         self.platformVersion = platformVersion
         self.parameters = parameters
         self.urlSession = urlSession
     }
 
     public func checkApplicationDeprecation(onComplete: @escaping CompletionHandler) {
-        guard let url = URL(string: "\(Self.baseURL)/api/v1/target-checks") else {
+        var targetUrl = Self.baseURL
+        if (!baseURLOverride.isEmpty) {
+            targetUrl = baseURLOverride
+        }
+        guard let url = URL(string: "\(targetUrl)/api/v1/target-checks") else {
             assertionFailure("Error initializing KickerIO URL")
             onComplete(.failure(KickItError.badURL))
             return
