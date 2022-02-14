@@ -32,7 +32,7 @@ public enum KickItError: Error {
 public final class KickItSdk {
     public typealias CompletionHandler = (Result<KickItResponse, Error>) -> Void
 
-    private static let baseURL = "https://kickit.dev"
+    private static let baseURL = "https://www.kickit.dev"
     private static let baseURLKey = "kickit_api_base_url"
     private static let apiKeyPlistKey = "kickit_api_key"
     private static let appNamePlistKey = "CFBundleName"
